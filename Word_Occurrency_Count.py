@@ -1,18 +1,18 @@
 def clean_Text(txt):
-    txt = txt.replace("’s", '')
-    txt = txt.replace("'s", '')
-    txt = txt.replace(',', '')
-    txt = txt.replace(".", '')
-    txt = txt.replace('!', '')
-    txt = txt.replace(';', '')
-    txt = txt.replace('?', '')
-    txt = txt.replace('-', '')
-    txt = txt.replace('"', '')
-    txt = txt.replace("'", '')
-    txt = txt.replace('“', '')
-    txt = txt.replace('”', '')
-    txt = txt.replace('‘', '')
-    txt = txt.replace('’', '')
+    txt = txt.replace("’s", ' ')
+    txt = txt.replace("'s", ' ')
+    txt = txt.replace(',', ' ')
+    txt = txt.replace(".", ' ')
+    txt = txt.replace('!', ' ')
+    txt = txt.replace(';', ' ')
+    txt = txt.replace('?', ' ')
+    txt = txt.replace('-', ' ')
+    txt = txt.replace('"', ' ')
+    txt = txt.replace("'", ' ')
+    txt = txt.replace('“', ' ')
+    txt = txt.replace('”', ' ')
+    txt = txt.replace('‘', ' ')
+    txt = txt.replace('’', ' ')
     txt = txt.replace('\n', '')
     return txt
 
@@ -47,6 +47,8 @@ for raw in content:
             stat[tmp_list[x]] = 1
         # If showed, then add 1
         stat[tmp_list[x]] += 1
+
+print(f'This article has {len(contentLines)} words')
 
 str = input('Enter a word to search: ')
 str = str.strip(' ')
